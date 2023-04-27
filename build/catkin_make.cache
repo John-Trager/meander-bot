@@ -1,0 +1,2 @@
+esw
+-DCATKIN_DEVEL_PREFIX=/home/john/meander-bot/devel -DCMAKE_INSTALL_PREFIX=/home/john/meander-bot/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/john/meander-bot/build/devel
+
+Name: esw
+Description: Description of esw
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

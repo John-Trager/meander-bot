@@ -1,0 +1,5 @@
+# vscode 
+.vscode
+
+# ros stuff
+.catkin_workspace
