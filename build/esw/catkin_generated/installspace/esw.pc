@@ -1,8 +1,8 @@
-prefix=/usr/local
+prefix=/home/john/meander-bot/install
 
 Name: esw
 Description: Description of esw
 Version: 0.0.0
-Cflags: 
+Cflags: -I${prefix}/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: message_runtime

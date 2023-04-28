@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/john/meander-bot/build/devel/setup.sh
+    local-name: /home/john/meander-bot/devel/setup.sh

@@ -1,9 +1,14 @@
 # Meander Bot
 
 TODO:
-- work on fixing permissions with Jetson.GPIO
-- see if ros msg works
-- test out sending vel commands to motor_controller
+- begin CAD work on chassis
+- IMU node 
+    - the imu driver is broken (just prob just delete)
+    - may need to write some of this by hand as it seems most driver code is outdated w.r.t ROS version
+- lidar node
+    - check if it works in rviz (drivers seems work so far)
+- encoder hardware / code
+- power concerns (how tf we gonna power everything)
 
 The goal of this project is to create a modified jetbot that can patrol or meander around my house.
 
@@ -48,7 +53,10 @@ oddly enough the i2c bussses are mislabled when using busio:
 ## installing ROS melodic on Jetson
 [here](https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano/)
 
-# Motor drivers info
+
+# Info
+
+## Motor drivers info
 TODO: take some pictures and add here
 
 // feather motor driving wiring
@@ -57,21 +65,56 @@ TODO: take some pictures and add here
 - communication
 - output on long ends of controller
 
-# IMU info
+## IMU info
+[blog](https://automaticaddison.com/visualize-imu-data-using-the-mpu6050-ros-and-jetson-nano/)
+
 uses addres `68` on i2c
+
+## Lidar info
+[driver code repo](https://github.com/Slamtec/rplidar_ros)
+
+befor using may need to run `sudo chmod 777 /dev/ttyUSB0` to allow for the lidar to communicate with the jetson.
+
+Run rplidar node and view in the rviz:<br>
+```
+roslaunch rplidar_ros rplidar.launch (for RPLIDAR A1/A2)
+```
+If we don't want to use rviz then we can
+run rplidar node and view using test application:<br>
+```
+roslaunch rplidar_ros view_rplidar.launch (for RPLIDAR A1/A2)
+```
+then run to see the lidar output in the terminal:
+```
+rosrun rplidar_ros rplidarNodeClient
+```
+
 
 # ROS
 
 `catkin_make` ro build/compile code
 
 Some info about ROS can be found in [MRover's wiki](https://github.com/umrover/mrover-ros/wiki/4.-Fundamentals-of-ROS)
+also needed:
+- `sudo apt-get install python3-empy`
 
 ## Running stuff
+
+will sometimes need to `source devel/setup.bash`
+
 to check running nodes: `rosnode list`
+
+### Teleop Robot
+To run the robot in a teleop mode (using keyboard control):<br>
+`roslaunch teleop teleop_robot.launch`
+
+### Running Individual scripts/nodes
 
 make sure you start the main ros node before running other nodes:<br>
 `roscore`
 
 running motorcontroller node:<br>
 `rosrun esw motor_controller.py`
+
+
 

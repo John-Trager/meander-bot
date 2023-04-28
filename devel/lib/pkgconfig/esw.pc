@@ -3,6 +3,6 @@ prefix=/home/john/meander-bot/devel
 Name: esw
 Description: Description of esw
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/john/meander-bot/devel/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: message_runtime

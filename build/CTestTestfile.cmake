@@ -6,3 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("esw")
+subdirs("mpu_6050_driver")
+subdirs("teleop")
+subdirs("rplidar_ros")

@@ -33,5 +33,65 @@
   "directory": "/home/john/meander-bot/build/gtest/googlemock/gtest",
   "command": "/usr/bin/aarch64-linux-gnu-g++  -DGTEST_CREATE_SHARED_LIBRARY=1 -Dgtest_EXPORTS -I/usr/src/googletest/googletest/include -I/usr/src/googletest/googletest  -g -fPIC    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc",
   "file": "/usr/src/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNodeClient.dir/src/client.cpp.o -c /home/john/meander-bot/src/rplidar_ros/src/client.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/src/client.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/src/node.cpp.o -c /home/john/meander-bot/src/rplidar_ros/src/node.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/src/node.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_socket.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/arch/linux/net_socket.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/arch/linux/timer.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/arch/linux/timer.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/hal/thread.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/hal/thread.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/rplidar_driver.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/rplidar_driver.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_crc.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/sl_crc.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/sl_crc.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_lidar_driver.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/sl_lidar_driver.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_serial_channel.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/sl_serial_channel.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/sl_serial_channel.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_tcp_channel.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/sl_tcp_channel.cpp"
+},
+{
+  "directory": "/home/john/meander-bot/build/rplidar_ros",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rplidar_ros\\\" -I/home/john/meander-bot/src/rplidar_ros/./sdk/include -I/home/john/meander-bot/src/rplidar_ros/./sdk/src -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp  -std=c++11  -O3 -DNDEBUG   -o CMakeFiles/rplidarNode.dir/sdk/src/sl_udp_channel.cpp.o -c /home/john/meander-bot/src/rplidar_ros/sdk/src/sl_udp_channel.cpp",
+  "file": "/home/john/meander-bot/src/rplidar_ros/sdk/src/sl_udp_channel.cpp"
 }
 ]

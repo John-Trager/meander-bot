@@ -68,13 +68,13 @@ set(esw_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(esw_SOURCE_PREFIX /home/john/meander-bot/src/esw)
-  set(esw_DEVEL_PREFIX /home/john/meander-bot/build/devel)
+  set(esw_DEVEL_PREFIX /home/john/meander-bot/devel)
   set(esw_INSTALL_PREFIX "")
   set(esw_PREFIX ${esw_DEVEL_PREFIX})
 else()
   set(esw_SOURCE_PREFIX "")
   set(esw_DEVEL_PREFIX "")
-  set(esw_INSTALL_PREFIX /usr/local)
+  set(esw_INSTALL_PREFIX /home/john/meander-bot/install)
   set(esw_PREFIX ${esw_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(esw_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(esw_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /usr/local/lib;/home/john/meander-bot/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/john/meander-bot/install/lib;/home/john/meander-bot/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(esw_EXPORTED_TARGETS "")
+set(esw_EXPORTED_TARGETS "esw_generate_messages_cpp;esw_generate_messages_eus;esw_generate_messages_lisp;esw_generate_messages_nodejs;esw_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${esw_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${esw_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   list(APPEND esw_EXPORTED_TARGETS ${${esw_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "esw-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${esw_DIR}/${extra})
