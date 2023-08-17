@@ -68,7 +68,7 @@ oddly enough the i2c bussses are mislabled when using busio:
 </p>
 <p align="center" style="font-size: 14px;"><i>Wiring photo of the Feather motor driver</i></p>
 
-The brown and white cable in the lower left of the driver are the I2C connectors with the brown wire connecting to `3` and the white to `5`. The red and black cable near the top of the feather are the logic 3.3V power. This is connected to the Jetson's 3.3V and ground. The red and black cable near the bottom of the feather is the VIN or power to the motors. In this case it is plugged into the Jetson's 5V and ground but this is not super safe for the Jetson to power motors off of its pins so instead I know plug it into an external battery (still experimenting with the voltage but it can handle up to 13V).
+The brown and white cable in the lower left of the driver are the I2C connectors with the brown wire connecting to `3` and the white to `5`. The red and black cable near the top of the feather are the logic 3.3V power. This is connected to the Jetson's 3.3V and ground. The red and black cable near the bottom of the feather is the VIN or power to the motors. In this case it is plugged into the Jetson's 5V and ground but this is not super safe for the Jetson to power motors off of its pins so instead I now plug it into an external battery (still experimenting with the voltage but it can handle up to 13V).
 
 ## IMU info
 [blog](https://automaticaddison.com/visualize-imu-data-using-the-mpu6050-ros-and-jetson-nano/)
