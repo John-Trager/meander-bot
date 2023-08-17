@@ -1,0 +1,20 @@
+<!-- 
+    This launch file is for the teleoperation of Meander
+ -->
+<launch>
+
+    <!-- params for hardware interfaces including IMU, Motor Drivers, Cams, etc -->
+    <rosparam command="load" file="$(find meanderbot)/config/esw.yaml"/>
+    
+    <node name="motor_controller" pkg="meanderbot" type="motor_controller.py" output="log"/>
+    
+    <!-- TODO: build out IMU driver nodes -->
+    <!-- <node name="imu_driver" pkg="meanderbot" type="imu_driver.py" output="screen"/> -->
+
+    <!-- TODO: camera node -->
+    <!-- <node name="cameras" pkg="meanderbot" type="cameras.py"/> -->
+    
+    <!-- interface to send drive commands -->
+    <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"/>
+
+</launch>

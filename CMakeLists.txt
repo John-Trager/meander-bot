@@ -20,6 +20,7 @@ set(MEANDER_PACKAGES
 # Message files
 set(MEANDER_MESSAGE_FILES
         CameraCmd.msg
+        MotorCmd.msg
 )
 
 # Service files
@@ -44,7 +45,30 @@ set(MEANDER_CATKIN_PACKAGES
         )
 
 ## CREATE CMAKE MACROS 
-# TODO build the macros here
+
+macro(add_tests_macro)
+    # Add C++ unit tests
+    #catkin_add_gtest(example-cpp-test test/example/cpp_test.cpp)
+
+    # Python unit tests
+    #catkin_add_nosetests(test/navigation/drive_test.py)
+    #catkin_add_nosetests(test/teleop/teleop_test.py)
+    #catkin_add_nosetests(test/util/SE3_test.py)
+    #catkin_add_nosetests(test/util/SO3_test.py)
+
+    # Integration tests (python and c++)
+    find_package(rostest REQUIRED)
+    #add_rostest(test/example/basic_integration_test.test)
+    #add_rostest(test/integration/integration.test)
+    #add_rostest(test/util/SE3_tf_test.test)
+endmacro()
+
+# launch install macro
+macro(install_launch_macro)
+install(DIRECTORY launch
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+        )
+endmacro()
 
 
 ## Find catkin macros and libraries
@@ -54,12 +78,6 @@ find_package(
         ${MEANDER_PACKAGES}
 )
 
-
-## Uncomment this if the package has a setup.py. This macro ensures
-## modules and global scripts declared therein get installed
-## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-
-# TODO: this eventually will be true!
 # 4. Python module support
 catkin_python_setup()
 
@@ -101,18 +119,12 @@ add_message_files(
 #        ${MEANDER_SERVICE_FILES}
 #)
 
-
-
-# TODO: uncomment once we have created our own messages
 # 6. Invoke messages (generate_messages)
 
 generate_messages(
         DEPENDENCIES
         ${MEANDER_ROS_MESSAGES}
 )
-
-
-# TODO: generate dynamic reconfigureation options here
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -128,7 +140,7 @@ generate_messages(
 ##   * uncomment the "generate_dynamic_reconfigure_options" section below
 ##     and list every .cfg file to be processed
 
-
+# TODO: uncomment if we plan to use dynamic reconfig
 #generate_dynamic_reconfigure_options(
 #        ${MEANDER_PARAMETERS}
 #)
@@ -195,9 +207,11 @@ include_directories(
 ## Install ##
 #############
 
-install(DIRECTORY launch/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
+# 10. Install rules
+install_launch_macro()
+if (COMMAND additional_install_macro)
+    additional_install_macro()
+endif ()
 
 # all install targets should use catkin DESTINATION variables
 # See http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html
@@ -237,9 +251,11 @@ install(DIRECTORY launch/
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
 
-#############
-## Testing ##
-#############
+
+#9. testing
+if (COMMAND add_tests_macro)
+    add_tests_macro()
+endif ()
 
 ## Add gtest based cpp test target and link libraries
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_meanderbot.cpp)

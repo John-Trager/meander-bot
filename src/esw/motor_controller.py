@@ -3,8 +3,8 @@
 import rospy
 import board
 import busio
-# TODO: broken? can't find / import message file
-#from esw.msg import MotorCommand
+
+from meanderbot.msg import MotorCmd
 from geometry_msgs.msg import Twist
 
 from adafruit_motorkit import MotorKit

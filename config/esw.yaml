@@ -1,0 +1,65 @@
+bot:
+  length: 0.14
+  width: 0.146
+  max_speed: 1.0 # m/s
+
+drive_motors:
+  controllers:
+    Left:
+      motorId: 1
+      inversion: 1.0 # 1.0 or -1.0
+      kP: 0.05
+      kI: 0.0
+    Right:
+      motorId: 2
+      inversion: 1.0
+      kP: 0.05
+      kI: 0.0
+
+# TODO: update the below
+imu_driver:
+  port: "/dev/imu"
+  baud: 115200
+  frame_id: "imu_link"
+
+cameras:
+  camera_type_info:
+    # vendor_id and vendor is obtained by running `udevadm info --query=all /dev/video0`
+    # width and height are obtained by running `v4l2-ctl -d /dev/video0 --list-formats-ext`
+    # An important thing to know is that actual bps is much less than bps in config.
+    # However, we need to keep bps in config higher otherwise there is too much compression
+    regular:
+      vendor_id: "32e4" # TODO: change this to the correct values
+      vendor: "HD_USB_Camera" # TODO: change this to the correct values
+      use_jpeg: true
+      quality_options:
+        - width: 320
+          height: 240
+          fps: 15
+          bps: 173000
+        - width: 352
+          height: 288
+          fps: 15
+          bps: 691000
+        - width: 640
+          height: 480
+          fps: 15
+          bps: 2000000
+        - width: 960
+          height: 720
+          fps: 15
+          bps: 3000000
+        - width: 1280
+          height: 720
+          fps: 15
+          bps: 4200000
+  max_num_resolutions: 5
+  # TODO: update the below
+  # Number of devices corresponds to number of cmds in
+  #   - ChangeCameras.srv
+  #   - ResetCameras.srv
+  max_streams: 4
+  max_device_id: 20
+  ips:
+    primary: "10.0.0.7"
+    secondary: "10.0.0.8"
