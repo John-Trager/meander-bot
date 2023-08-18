@@ -34,7 +34,7 @@ Robot Hardware:
 note: that I don't remeber but you need to configure the I2C pins (maybe some other pin thing) on the jetson, there is some config thing
 [here](https://learn.adafruit.com/circuitpython-libraries-on-linux-and-the-nvidia-jetson-nano/initial-setup) may be helpful
 
-we will also need to set the correct permissions so our user can access GPIO. Follow instruction from [Jetson GPIO](https://github.com/NVIDIA/jetson-gpio/tree/6cab53dc80f8f5ecd6257d90dc7c0c51cb5348a7) to set the correct user permissions.
+we will also need to set the correct permissions so our user can access GPIO. Follow instruction from [Jetson GPIO](https://github.com/NVIDIA/jetson-gpio/tree/6cab53dc80f8f5ecd6257d90dc7c0c51cb5348a7) to set the correct user permissions. I ran into issues where I would have to reset the rules/permissions every time the Jetson rebooted and found a fix [here](https://github.com/NVIDIA/jetson-gpio/issues/20).
 
 ## I2C
 to check if a device is connected via I2C use:<br>
