@@ -4,6 +4,7 @@ bot:
   max_speed: 1.0 # m/s
 
 drive_motors:
+  encoder_resolution: 540 # ticks / revolution 
   controllers:
     Left:
       motorId: 1

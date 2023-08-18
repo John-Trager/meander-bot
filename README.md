@@ -5,7 +5,7 @@ The goal of this project is to create a modified jetbot that can patrol or meand
 Robot Hardware:
 - jetson nano
 - adafruit featherwing motorcontroller
-- DG10D-E-PH motor with encoder
+- [DG10D-E-PH](https://www.sparkfun.com/products/16413) motor with [encoder](https://ros-mobile-robots.com/DG01D-E-motor-with-encoder/)
 - Slamtex RPLidar A1 lidar
 - Luxonis OAK-D stereo AI camera
 - MPU6050 imu

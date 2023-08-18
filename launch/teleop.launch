@@ -5,6 +5,9 @@
 
     <!-- params for hardware interfaces including IMU, Motor Drivers, Cams, etc -->
     <rosparam command="load" file="$(find meanderbot)/config/esw.yaml"/>
+
+    <!-- launch motor encoders (from arduino) -->
+    <include file="$(find meanderbot)/launch/encoders.launch"/>
     
     <node name="motor_controller" pkg="meanderbot" type="motor_controller.py" output="log"/>
     
