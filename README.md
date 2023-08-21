@@ -140,9 +140,11 @@ running motorcontroller node:<br>
 # TODO
 - ~~begin CAD work on chassis~~
 - IMU node 
-    - the imu driver is broken (just prob just delete)
-    - may need to write some of this by hand as it seems most driver code is outdated w.r.t ROS version
+    - mostly working as of now but need to make sure TF tree is setup correctly
 - lidar node
     - check if it works in rviz (drivers seems work so far)
 - encoder hardware / code
 - power concerns (how tf we gonna power everything)
+
+## Alternative Hardware
+- [Larger Motors with encoder](https://www.pololu.com/product/4806)
