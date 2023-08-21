@@ -1,0 +1,9 @@
+<!-- 
+    This launch file is for launching the filtered IMU driver
+ -->
+<launch>    
+
+    <!-- launch mpu calibration program -->
+    <include file="$(find mpu6050_driver)/launch/mpu6050_driver_with_filter.launch"/>
+
+</launch>

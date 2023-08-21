@@ -1,0 +1,9 @@
+<!-- 
+    This launch file is for calibrating the IMU
+ -->
+<launch>    
+
+    <!-- launch mpu calibration program -->
+    <include file="$(find mpu6050_driver)/launch/mpu6050_calibration.launch"/>
+
+</launch>

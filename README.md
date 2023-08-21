@@ -71,11 +71,16 @@ oddly enough the i2c bussses are mislabled when using busio:
 The brown and white cable in the lower left of the driver are the I2C connectors with the brown wire connecting to `3` and the white to `5`. The red and black cable near the top of the feather are the logic 3.3V power. This is connected to the Jetson's 3.3V and ground. The red and black cable near the bottom of the feather is the VIN or power to the motors. In this case it is plugged into the Jetson's 5V and ground but this is not super safe for the Jetson to power motors off of its pins so instead I now plug it into an external battery (still experimenting with the voltage but it can handle up to 13V).
 
 ## IMU info
-[blog](https://automaticaddison.com/visualize-imu-data-using-the-mpu6050-ros-and-jetson-nano/)
+[blog](https://automaticaddison.com/visualize-imu-data-using-the-mpu6050-ros-and-jetson-nano/) that has some basic info on getting the sensor working.
 
-uses address `68` on i2c
+I've decided to use the MPU6050 ROS package from [Brazilian-Institute-of-Robotics](https://github.com/Brazilian-Institute-of-Robotics/mpu6050_driver) (BIR) you can find the instructions on setting up their project and nodes there.
 
-Currently a work in progress...
+### Wiring / Sensor setup
+I am currently using the MPU6050 IMU. If you are looking to get an IMU I would recommend getting a more new sensor like the BNO085 has show better accuracy and has a large community base. I am using the 6050 since it is what I had around.
+
+We will wire the 6050 directly to the Jetson nano. We connect the IMUs VCC to 3.3V and the ground to ground on the Jetson. I also connected the SDA/SCL to the Jetson's second I2C pins on pin 27 (SDA) and 28 (SCL). The 6050 also uses address `68` on i2c.
+
+In the BIR ROS package we need to switch the `mpu_settings.yaml` to reflect that we are using the right I2C on the Jetson so switch to `bus_uri: "/dev/i2c-0"` if using pin 27/28 or leave it at `bus_uri: "/dev/i2c-1"` if using 3/5.
 
 ## Lidar info
 The Lidar uses a separate ROS package that can be found here:
